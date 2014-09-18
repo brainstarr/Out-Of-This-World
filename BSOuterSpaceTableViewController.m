@@ -32,6 +32,18 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.planets = [[NSMutableArray alloc]init];
+    
+    NSString *planet1 = @"Mercury";
+    NSString *planet2 = @"Venus";
+    NSString *planet3 = @"Earth";
+    NSString *planet4 = @"Mars";
+    NSString *planet5 = @"Jupiter";
+    NSString *planet6 = @"Saturn";
+    NSString *planet7 = @"Uranus";
+    NSString *planet8 = @"Neptune";
+    
+    self.planets = [[NSMutableArray alloc]initWithObjects:planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,19 +58,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 2;
+    return 8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if (section == 0){
-        return 4;
-    }
-    else{
-        return 2;
-    }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,14 +75,33 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%i", indexPath.row];
+    cell.textLabel.text = [self.planets objectAtIndex:indexPath.section];
     
-    if (indexPath.section == 0){
-        cell.backgroundColor = [UIColor redColor];
+    if(indexPath.section == 0){
+        cell.backgroundColor = [UIColor lightGrayColor];
     }
-    else {
+    else if (indexPath.section == 1){
+        cell.backgroundColor = [UIColor greenColor];
+    }
+    else if (indexPath.section == 2){
         cell.backgroundColor = [UIColor blueColor];
     }
+    else if (indexPath.section == 3){
+        cell.backgroundColor = [UIColor redColor];
+    }
+    else if (indexPath.section == 4){
+        cell.backgroundColor = [UIColor orangeColor];
+    }
+    else if (indexPath.section == 5){
+        cell.backgroundColor = [UIColor yellowColor];
+    }
+    else if (indexPath.section == 6){
+        cell.backgroundColor = [UIColor greenColor];
+    }
+    else if (indexPath.section == 7){
+        cell.backgroundColor = [UIColor purpleColor];
+    }
+
     
     return cell;
 }

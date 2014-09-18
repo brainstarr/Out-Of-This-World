@@ -10,4 +10,6 @@
 
 @interface BSOuterSpaceTableViewController : UITableViewController
 
+@property (strong, nonatomic)NSMutableArray *planets;
+
 @end
