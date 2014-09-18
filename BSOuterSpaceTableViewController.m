@@ -71,10 +71,10 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%i", indexPath.row];
     
     if (indexPath.section == 0){
-        cell.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor redColor];
     }
     else {
-        cell.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor blueColor];
     }
     
     return cell;
