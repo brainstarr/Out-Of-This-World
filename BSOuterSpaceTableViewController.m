@@ -72,11 +72,9 @@
     
     if (indexPath.section == 0){
         cell.backgroundColor = [UIColor clearColor];
-        cell.contentView.backgroundColor = [UIColor redColor];
     }
     else {
         cell.backgroundColor = [UIColor clearColor];
-        cell.contentView.backgroundColor = [UIColor blueColor];
     }
     
     return cell;
