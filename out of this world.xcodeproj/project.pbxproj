@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009EED4619CBAA2C006029C1 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 009EED4519CBAA2C006029C1 /* AstronomicalData.m */; };
 		00C27B7C19C8EC4700855E35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C27B7B19C8EC4700855E35 /* UIKit.framework */; };
 		00C27B7E19C8EC4700855E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C27B7D19C8EC4700855E35 /* Foundation.framework */; };
 		00C27B8019C8EC4700855E35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C27B7F19C8EC4700855E35 /* CoreGraphics.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		009EED4419CBAA2C006029C1 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AstronomicalData.h; path = "14029481202014-02-10_13-05-31__AstronmicalDataModel/AstronomicalData.h"; sourceTree = "<group>"; };
+		009EED4519CBAA2C006029C1 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AstronomicalData.m; path = "14029481202014-02-10_13-05-31__AstronmicalDataModel/AstronomicalData.m"; sourceTree = "<group>"; };
 		00C27B7719C8EC4700855E35 /* out of this world.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "out of this world.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C27B7B19C8EC4700855E35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		00C27B7D19C8EC4700855E35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 		00C27B8219C8EC4700855E35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				009EED4419CBAA2C006029C1 /* AstronomicalData.h */,
+				009EED4519CBAA2C006029C1 /* AstronomicalData.m */,
 				00C27B8319C8EC4700855E35 /* out of this world-Info.plist */,
 				00C27B8419C8EC4700855E35 /* InfoPlist.strings */,
 				00C27B8719C8EC4700855E35 /* main.m */,
@@ -197,7 +202,7 @@
 			name = "out of this worldTests";
 			productName = "out of this worldTests";
 			productReference = 00C27B9E19C8EC4700855E35 /* out of this worldTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -274,6 +279,7 @@
 				00C27B8819C8EC4700855E35 /* main.m in Sources */,
 				00C27B8C19C8EC4700855E35 /* BSAppDelegate.m in Sources */,
 				00C27BB819C8ED7700855E35 /* BSOuterSpaceTableViewController.m in Sources */,
+				009EED4619CBAA2C006029C1 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +454,7 @@
 				00C27BB219C8EC4700855E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00C27BB319C8EC4700855E35 /* Build configuration list for PBXNativeTarget "out of this worldTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				00C27BB519C8EC4700855E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

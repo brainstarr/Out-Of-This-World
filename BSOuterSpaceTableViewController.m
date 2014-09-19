@@ -44,6 +44,16 @@
     NSString *planet8 = @"Neptune";
     
     self.planets = [[NSMutableArray alloc]initWithObjects:planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, nil];
+    
+//    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc]init];
+//    NSString *firstColor = @"red";
+//    [myDictionary setObject:firstColor forKey:@"fire engine red"];
+//    [myDictionary setObject:@"blue" forKey:@"ocean color"];
+//    [myDictionary setObject:@"Yellow" forKey:@"star color"];
+//    NSLog(@"%@", myDictionary);
+
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +68,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 8;
+    return [self.planets count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -77,30 +87,31 @@
     
     cell.textLabel.text = [self.planets objectAtIndex:indexPath.section];
     
-    if(indexPath.section == 0){
-        cell.backgroundColor = [UIColor lightGrayColor];
-    }
-    else if (indexPath.section == 1){
-        cell.backgroundColor = [UIColor greenColor];
-    }
-    else if (indexPath.section == 2){
-        cell.backgroundColor = [UIColor blueColor];
-    }
-    else if (indexPath.section == 3){
-        cell.backgroundColor = [UIColor redColor];
-    }
-    else if (indexPath.section == 4){
-        cell.backgroundColor = [UIColor orangeColor];
-    }
-    else if (indexPath.section == 5){
-        cell.backgroundColor = [UIColor yellowColor];
-    }
-    else if (indexPath.section == 6){
-        cell.backgroundColor = [UIColor greenColor];
-    }
-    else if (indexPath.section == 7){
-        cell.backgroundColor = [UIColor purpleColor];
-    }
+    
+//    if(indexPath.section == 0){
+//        cell.backgroundColor = [UIColor lightGrayColor];
+//    }
+//    else if (indexPath.section == 1){
+//        cell.backgroundColor = [UIColor greenColor];
+//    }
+//    else if (indexPath.section == 2){
+//        cell.backgroundColor = [UIColor blueColor];
+//    }
+//    else if (indexPath.section == 3){
+//        cell.backgroundColor = [UIColor redColor];
+//    }
+//    else if (indexPath.section == 4){
+//        cell.backgroundColor = [UIColor orangeColor];
+//    }
+//    else if (indexPath.section == 5){
+//        cell.backgroundColor = [UIColor yellowColor];
+//    }
+//    else if (indexPath.section == 6){
+//        cell.backgroundColor = [UIColor greenColor];
+//    }
+//    else if (indexPath.section == 7){
+//        cell.backgroundColor = [UIColor purpleColor];
+//    }
 
     
     return cell;
