@@ -7,6 +7,8 @@
 //
 
 #import "BSOuterSpaceTableViewController.h"
+#import "AstronomicalData.h"
+#import "BSSpaceObject.h"
 
 @interface BSOuterSpaceTableViewController ()
 
@@ -34,16 +36,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //self.planets = [[NSMutableArray alloc]init];
     
-    NSString *planet1 = @"Mercury";
-    NSString *planet2 = @"Venus";
-    NSString *planet3 = @"Earth";
-    NSString *planet4 = @"Mars";
-    NSString *planet5 = @"Jupiter";
-    NSString *planet6 = @"Saturn";
-    NSString *planet7 = @"Uranus";
-    NSString *planet8 = @"Neptune";
+    self.planets = [[NSMutableArray alloc] init];
     
-    self.planets = [[NSMutableArray alloc]initWithObjects:planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, nil];
+    for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
+    {
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_IMAGE]];
+        BSSpaceObject *planet = [[BSSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:planet];
+    }
     
 //    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc]init];
 //    NSString *firstColor = @"red";
@@ -85,9 +85,15 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = [self.planets objectAtIndex:indexPath.section];
+    BSSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+    cell.textLabel.text = planet.name;
     
+    return cell;
     
+    //Old configs prior to custom initializer
+//    cell.textLabel.text = [self.planets objectAtIndex:indexPath.section];
+//    
+//    
 //    if(indexPath.section == 0){
 //        cell.backgroundColor = [UIColor lightGrayColor];
 //    }
