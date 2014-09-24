@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSSpaceObject.h"
 
 @interface BSSpaceImageViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic)UIImageView *imageView;
+@property (strong, nonatomic)BSSpaceObject *spaceObject;
 
 @end

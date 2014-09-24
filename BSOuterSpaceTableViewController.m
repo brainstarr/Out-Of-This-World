@@ -9,6 +9,7 @@
 #import "BSOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "BSSpaceObject.h"
+#import "BSSpaceImageViewController.h"
 
 @interface BSOuterSpaceTableViewController ()
 
@@ -44,7 +45,20 @@
         BSSpaceObject *planet = [[BSSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:planet];
     }
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[BSSpaceImageViewController class]])
+        {
+            BSSpaceImageViewController *nextViewController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            BSSpaceObject *selectedObject = self.planets[path.row];
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

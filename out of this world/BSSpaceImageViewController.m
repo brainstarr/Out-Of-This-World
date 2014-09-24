@@ -19,12 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Jupiter.jpg"]];
+    self.imageView = [[UIImageView alloc]initWithImage:self.spaceObject.spaceImage];
     self.scrollView.contentSize = self.imageView.frame.size;
     [self.scrollView addSubview:self.imageView];
     self.scrollView.delegate = self;
     
-    self.scrollView.minimumZoomScale = .5;
+    self.scrollView.minimumZoomScale = .1;
     self.scrollView.maximumZoomScale = 2;
     
     
