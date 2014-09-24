@@ -35,6 +35,7 @@
 		00C27BAA19C8EC4700855E35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00C27BA819C8EC4700855E35 /* InfoPlist.strings */; };
 		00C27BAD19C8EC4700855E35 /* out_of_this_worldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C27BAC19C8EC4700855E35 /* out_of_this_worldTests.m */; };
 		00C27BB819C8ED7700855E35 /* BSOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */; };
+		00FEC5C619D3700900E9DFDB /* BSSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		00C27BAC19C8EC4700855E35 /* out_of_this_worldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = out_of_this_worldTests.m; sourceTree = "<group>"; };
 		00C27BB619C8ED7700855E35 /* BSOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSOuterSpaceTableViewController.h; path = ../BSOuterSpaceTableViewController.h; sourceTree = "<group>"; };
 		00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSOuterSpaceTableViewController.m; path = ../BSOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		00FEC5C419D3700900E9DFDB /* BSSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSpaceImageViewController.h; sourceTree = "<group>"; };
+		00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSpaceImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 			children = (
 				00C27BB619C8ED7700855E35 /* BSOuterSpaceTableViewController.h */,
 				00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */,
+				00FEC5C419D3700900E9DFDB /* BSSpaceImageViewController.h */,
+				00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				0061F99719CFAA03005ED769 /* BSSpaceObject.m in Sources */,
 				00C27B8C19C8EC4700855E35 /* BSAppDelegate.m in Sources */,
 				00C27BB819C8ED7700855E35 /* BSOuterSpaceTableViewController.m in Sources */,
+				00FEC5C619D3700900E9DFDB /* BSSpaceImageViewController.m in Sources */,
 				009EED4619CBAA2C006029C1 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
