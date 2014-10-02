@@ -80,7 +80,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhC-ZG-QCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="66"/>
+            <point key="canvasLocation" x="1038" y="-191"/>
+        </scene>
+        <!--Space Data View Controller-->
+        <scene sceneID="ssn-pX-FpT">
+            <objects>
+                <viewController id="0vD-Oa-1kf" customClass="BSSpaceDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CZK-lc-rQd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mSL-l6-tpx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mSL-l6-tpx" secondAttribute="bottom" type="default" id="MtF-so-zdy"/>
+                            <constraint firstAttribute="trailing" secondItem="mSL-l6-tpx" secondAttribute="trailing" type="default" id="V0n-c4-Fxb"/>
+                            <constraint firstItem="mSL-l6-tpx" firstAttribute="top" secondItem="CZK-lc-rQd" secondAttribute="top" type="default" id="Yu2-cU-QeS"/>
+                            <constraint firstItem="mSL-l6-tpx" firstAttribute="leading" secondItem="CZK-lc-rQd" secondAttribute="leading" type="default" id="axk-6V-JvD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mSL-l6-tpx" id="obQ-wG-nBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYu-f7-k0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZN-1w-6ET">

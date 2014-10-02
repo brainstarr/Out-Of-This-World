@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003F341A19DCEEC70071818C /* BSSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F341919DCEEC70071818C /* BSSpaceDataViewController.m */; };
 		0061F98B19CFA94D005ED769 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98119CFA94D005ED769 /* Earth.jpg */; };
 		0061F98C19CFA94D005ED769 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98219CFA94D005ED769 /* EinsteinRing.jpg */; };
 		0061F98D19CFA94D005ED769 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98319CFA94D005ED769 /* Jupiter.jpg */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003F341819DCEEC70071818C /* BSSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSpaceDataViewController.h; sourceTree = "<group>"; };
+		003F341919DCEEC70071818C /* BSSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSpaceDataViewController.m; sourceTree = "<group>"; };
 		0061F98119CFA94D005ED769 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Earth.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/Earth.jpg"; sourceTree = "<group>"; };
 		0061F98219CFA94D005ED769 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = EinsteinRing.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/EinsteinRing.jpg"; sourceTree = "<group>"; };
 		0061F98319CFA94D005ED769 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jupiter.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/Jupiter.jpg"; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */,
 				00FEC5C419D3700900E9DFDB /* BSSpaceImageViewController.h */,
 				00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */,
+				003F341819DCEEC70071818C /* BSSpaceDataViewController.h */,
+				003F341919DCEEC70071818C /* BSSpaceDataViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C27B8819C8EC4700855E35 /* main.m in Sources */,
+				003F341A19DCEEC70071818C /* BSSpaceDataViewController.m in Sources */,
 				0061F99719CFAA03005ED769 /* BSSpaceObject.m in Sources */,
 				00C27B8C19C8EC4700855E35 /* BSAppDelegate.m in Sources */,
 				00C27BB819C8ED7700855E35 /* BSOuterSpaceTableViewController.m in Sources */,
