@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSSpaceObject.h"
 
 @interface BSSpaceDataViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) BSSpaceObject *spaceObject;
 
 @end

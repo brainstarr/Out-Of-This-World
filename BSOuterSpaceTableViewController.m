@@ -10,6 +10,7 @@
 #import "AstronomicalData.h"
 #import "BSSpaceObject.h"
 #import "BSSpaceImageViewController.h"
+#import "BSSpaceDataViewController.h"
 
 @interface BSOuterSpaceTableViewController ()
 
@@ -59,6 +60,16 @@
             nextViewController.spaceObject = selectedObject;
         }
     }
+    if ([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[BSSpaceDataViewController class]])
+        {
+            BSSpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            BSSpaceObject *selectedObject = self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +114,12 @@
 
     }
 
+#pragma mark UITableViewDelegate
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
+}
 
 /*
 // Override to support conditional editing of the table view.
