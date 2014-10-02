@@ -27,6 +27,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableView Data Source Methods
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Data Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = @"Filler Text";
+    
+    return cell;
+}
+
+-(NSInteger *)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
 /*
 #pragma mark - Navigation
 
