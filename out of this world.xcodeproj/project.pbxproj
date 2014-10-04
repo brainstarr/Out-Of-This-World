@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		003F341A19DCEEC70071818C /* BSSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F341919DCEEC70071818C /* BSSpaceDataViewController.m */; };
+		003F345419DF8B7A0071818C /* BSAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F345319DF8B7A0071818C /* BSAddSpaceObjectViewController.m */; };
 		0061F98B19CFA94D005ED769 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98119CFA94D005ED769 /* Earth.jpg */; };
 		0061F98C19CFA94D005ED769 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98219CFA94D005ED769 /* EinsteinRing.jpg */; };
 		0061F98D19CFA94D005ED769 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0061F98319CFA94D005ED769 /* Jupiter.jpg */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		003F341819DCEEC70071818C /* BSSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSpaceDataViewController.h; sourceTree = "<group>"; };
 		003F341919DCEEC70071818C /* BSSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSpaceDataViewController.m; sourceTree = "<group>"; };
+		003F345219DF8B7A0071818C /* BSAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		003F345319DF8B7A0071818C /* BSAddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddSpaceObjectViewController.m; sourceTree = "<group>"; };
 		0061F98119CFA94D005ED769 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Earth.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/Earth.jpg"; sourceTree = "<group>"; };
 		0061F98219CFA94D005ED769 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = EinsteinRing.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/EinsteinRing.jpg"; sourceTree = "<group>"; };
 		0061F98319CFA94D005ED769 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jupiter.jpg; path = "14029482102014-02-12_06-44-14__PlanetImages/Jupiter.jpg"; sourceTree = "<group>"; };
@@ -116,6 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003F345519DF8B980071818C /* Image View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00FEC5C419D3700900E9DFDB /* BSSpaceImageViewController.h */,
+				00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */,
+			);
+			name = "Image View Controller";
+			sourceTree = "<group>";
+		};
+		003F345619DF8BB60071818C /* Space Data View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				003F341819DCEEC70071818C /* BSSpaceDataViewController.h */,
+				003F341919DCEEC70071818C /* BSSpaceDataViewController.m */,
+			);
+			name = "Space Data View Controller";
+			sourceTree = "<group>";
+		};
+		003F345719DF8BC60071818C /* Add Space Object View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				003F345219DF8B7A0071818C /* BSAddSpaceObjectViewController.h */,
+				003F345319DF8B7A0071818C /* BSAddSpaceObjectViewController.m */,
+			);
+			name = "Add Space Object View Controller";
+			sourceTree = "<group>";
+		};
 		0061F99819CFB1E6005ED769 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,10 +159,9 @@
 			children = (
 				00C27BB619C8ED7700855E35 /* BSOuterSpaceTableViewController.h */,
 				00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */,
-				00FEC5C419D3700900E9DFDB /* BSSpaceImageViewController.h */,
-				00FEC5C519D3700900E9DFDB /* BSSpaceImageViewController.m */,
-				003F341819DCEEC70071818C /* BSSpaceDataViewController.h */,
-				003F341919DCEEC70071818C /* BSSpaceDataViewController.m */,
+				003F345519DF8B980071818C /* Image View Controller */,
+				003F345619DF8BB60071818C /* Space Data View Controller */,
+				003F345719DF8BC60071818C /* Add Space Object View Controller */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -280,6 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BS;
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Brian Starr";
 			};
@@ -361,6 +391,7 @@
 				00C27B8C19C8EC4700855E35 /* BSAppDelegate.m in Sources */,
 				00C27BB819C8ED7700855E35 /* BSOuterSpaceTableViewController.m in Sources */,
 				00FEC5C619D3700900E9DFDB /* BSSpaceImageViewController.m in Sources */,
+				003F345419DF8B7A0071818C /* BSAddSpaceObjectViewController.m in Sources */,
 				009EED4619CBAA2C006029C1 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
