@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BSAddSpaceObjectViewControllerDelegate <NSObject>
+
+@required
+
+-(void)addSpaceObject;
+-(void)didCancel;
+
+@end
+
 @interface BSAddSpaceObjectViewController : UIViewController
 
-//Text Fields
+@property (weak, nonatomic) id <BSAddSpaceObjectViewControllerDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *nickNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *diameterTextField;
@@ -18,7 +28,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *numberOfMoonsTextField;
 @property (strong, nonatomic) IBOutlet UITextField *funFactTextField;
 
-//Add and Remove buttons
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender;
 - (IBAction)addButtonPressed:(UIButton *)sender;

@@ -70,12 +70,31 @@
             targetViewController.spaceObject = selectedObject;
         }
     }
+    if ([segue.destinationViewController isKindOfClass:[BSAddSpaceObjectViewController class]])
+    {
+        BSAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - BSAddSpaceDelegateViewController Delegate
+
+-(void)didCancel
+{
+    NSLog(@"Did Cancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addSpaceObject
+{
+    NSLog(@"Did Add Space Object");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

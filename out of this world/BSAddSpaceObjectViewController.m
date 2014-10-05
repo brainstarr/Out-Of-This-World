@@ -37,8 +37,10 @@
 */
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender {
+    [self.delegate didCancel];
 }
 
 - (IBAction)addButtonPressed:(UIButton *)sender {
+    [self.delegate addSpaceObject];
 }
 @end
