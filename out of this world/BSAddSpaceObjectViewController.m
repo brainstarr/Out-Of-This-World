@@ -43,4 +43,18 @@
 - (IBAction)addButtonPressed:(UIButton *)sender {
     [self.delegate addSpaceObject];
 }
+
+- (BSSpaceObject *) returnNewSpaceObject
+{
+    BSSpaceObject *addedSpaceObject = [[BSSpaceObject alloc] init];
+    addedSpaceObject.name = self.nameTextField.text;
+    addedSpaceObject.nickname = self.nickNameTextField.text;
+    addedSpaceObject.diameter = [self.diameterTextField.text floatValue];
+    addedSpaceObject.temperature = [self.temperatureTextField.text floatValue];
+    addedSpaceObject.numberOfMoons = [self.numberOfMoonsTextField.text intValue];
+    addedSpaceObject.funFact = self.funFactTextField.text;
+    
+    return addedSpaceObject;
+}
+
 @end

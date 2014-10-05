@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSSpaceObject.h"
 
 @protocol BSAddSpaceObjectViewControllerDelegate <NSObject>
 
