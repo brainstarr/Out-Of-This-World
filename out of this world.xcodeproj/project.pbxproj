@@ -146,13 +146,13 @@
 			name = "Add Space Object View Controller";
 			sourceTree = "<group>";
 		};
-		003F345A19E0A20E0071818C /* Main View Controller */ = {
+		003F345A19E0A20E0071818C /* Planet Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				00C27BB619C8ED7700855E35 /* BSOuterSpaceTableViewController.h */,
 				00C27BB719C8ED7700855E35 /* BSOuterSpaceTableViewController.m */,
 			);
-			name = "Main View Controller";
+			name = "Planet Table View Controller";
 			sourceTree = "<group>";
 		};
 		0061F99819CFB1E6005ED769 /* View */ = {
@@ -166,7 +166,7 @@
 		0061F99919CFB200005ED769 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				003F345A19E0A20E0071818C /* Main View Controller */,
+				003F345A19E0A20E0071818C /* Planet Table View Controller */,
 				003F345519DF8B980071818C /* Image View Controller */,
 				003F345619DF8BB60071818C /* Space Data View Controller */,
 				003F345719DF8BC60071818C /* Add Space Object View Controller */,

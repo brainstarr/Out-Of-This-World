@@ -13,7 +13,7 @@
 
 @required
 
--(void)addSpaceObject;
+-(void)addSpaceObject:(BSSpaceObject *)spaceObject;
 -(void)didCancel;
 
 @end

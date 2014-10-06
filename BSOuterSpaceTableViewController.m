@@ -60,6 +60,7 @@
             nextViewController.spaceObject = selectedObject;
         }
     }
+    
     if ([sender isKindOfClass:[NSIndexPath class]])
     {
         if ([segue.destinationViewController isKindOfClass:[BSSpaceDataViewController class]])
@@ -70,6 +71,8 @@
             targetViewController.spaceObject = selectedObject;
         }
     }
+    
+    //Going TO new addSpaceObject VC
     if ([segue.destinationViewController isKindOfClass:[BSAddSpaceObjectViewController class]])
     {
         BSAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
@@ -83,19 +86,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - BSAddSpaceDelegateViewController Delegate
+#pragma mark - BSAddSpaceObjectDelegateViewController Delegate
 
 -(void)didCancel
 {
-    NSLog(@"Did Cancel");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)addSpaceObject
+-(void)addSpaceObject:(BSSpaceObject *)spaceObject
 {
-    NSLog(@"Did Add Space Object");
+    if (!self.addedSpaceObjects)
+    {
+        self.addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    [self.addedSpaceObjects addObject:spaceObject];
+    [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 #pragma mark - Table view data source
 
@@ -129,7 +137,9 @@
     // Configure the cell...
     
     if(indexPath.section == 1){
-        //New Space object info
+        BSSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
     }
     else{
         BSSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];

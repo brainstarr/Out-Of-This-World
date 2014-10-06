@@ -40,8 +40,10 @@
     [self.delegate didCancel];
 }
 
-- (IBAction)addButtonPressed:(UIButton *)sender {
-    [self.delegate addSpaceObject];
+- (IBAction)addButtonPressed:(UIButton *)sender
+{
+    BSSpaceObject *newSpaceObject = [self returnNewSpaceObject];
+    [self.delegate addSpaceObject:newSpaceObject];
 }
 
 - (BSSpaceObject *) returnNewSpaceObject
