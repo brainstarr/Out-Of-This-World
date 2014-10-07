@@ -18,6 +18,24 @@
 
 @implementation BSOuterSpaceTableViewController
 
+#pragma mark - Lazy instantiation
+
+-(NSMutableArray *)planets
+{
+    if (!_planets) {
+        _planets = [[NSMutableArray alloc]init];
+    }
+    return _planets;
+}
+
+-(NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects) {
+        _addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addedSpaceObjects;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -37,8 +55,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //self.planets = [[NSMutableArray alloc]init];
-    
-    self.planets = [[NSMutableArray alloc] init];
     
     for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
     {
@@ -116,10 +132,6 @@
 
 -(void)addSpaceObject:(BSSpaceObject *)spaceObject
 {
-    if (!self.addedSpaceObjects)
-    {
-        self.addedSpaceObjects = [[NSMutableArray alloc]init];
-    }
     [self.addedSpaceObjects addObject:spaceObject];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
