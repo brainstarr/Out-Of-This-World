@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.imageView = [[UIImageView alloc]initWithImage:self.spaceObject.spaceImage];
     self.scrollView.contentSize = self.imageView.frame.size;
     [self.scrollView addSubview:self.imageView];

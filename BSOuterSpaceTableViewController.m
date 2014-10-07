@@ -56,7 +56,17 @@
         {
             BSSpaceImageViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            BSSpaceObject *selectedObject = self.planets[path.row];
+            BSSpaceObject *selectedObject;
+            
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
             nextViewController.spaceObject = selectedObject;
         }
     }
@@ -67,7 +77,18 @@
         {
             BSSpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            BSSpaceObject *selectedObject = self.planets[path.row];
+            BSSpaceObject *selectedObject;
+            
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
+            
             targetViewController.spaceObject = selectedObject;
         }
     }
@@ -140,6 +161,7 @@
         BSSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = planet.name;
         cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
     }
     else{
         BSSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
