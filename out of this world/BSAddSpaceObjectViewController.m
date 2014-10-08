@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *orionImage = [UIImage imageNamed:@"Orion.jpg"];
+    UIImage *orionImage = [UIImage imageNamed:@"out_of_this_world_background_image.jpg"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:orionImage];
 }
 
