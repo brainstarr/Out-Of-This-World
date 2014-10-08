@@ -156,7 +156,7 @@
         <!--Add Space Object View Controller-->
         <scene sceneID="nTf-sc-6Gt">
             <objects>
-                <viewController id="zgn-6i-J9i" customClass="BSAddSpaceObjectViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="zgn-6i-J9i" customClass="BSAddSpaceObjectViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rG3-Pe-Ifj"/>
                         <viewControllerLayoutGuide type="bottom" id="0t9-8u-86U"/>
@@ -166,48 +166,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4a-sm-Psd">
-                                <rect key="frame" x="35" y="32" width="250" height="30"/>
+                                <rect key="frame" x="36" y="28" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-aJ-rn8">
-                                <rect key="frame" x="35" y="70" width="250" height="30"/>
+                                <rect key="frame" x="35" y="66" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diameter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evY-5z-DB2">
-                                <rect key="frame" x="35" y="108" width="250" height="30"/>
+                                <rect key="frame" x="35" y="104" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-ME-3Ti">
-                                <rect key="frame" x="35" y="146" width="250" height="30"/>
+                                <rect key="frame" x="35" y="142" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of moons" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avs-SC-jj0">
-                                <rect key="frame" x="35" y="189" width="250" height="30"/>
+                                <rect key="frame" x="35" y="180" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fun Fact" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0Y-Tl-Mas">
-                                <rect key="frame" x="36" y="227" width="250" height="30"/>
+                                <rect key="frame" x="36" y="218" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ish-aT-cle">
-                                <rect key="frame" x="36" y="265" width="120" height="45"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.90019955842391308" green="0.16636692421397903" blue="0.18759553539237253" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonPressed:" destination="zgn-6i-J9i" eventType="touchUpInside" id="ogO-dP-s5c"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eky-Es-EX7">
-                                <rect key="frame" x="164" y="265" width="121" height="45"/>
+                                <rect key="frame" x="100" y="256" width="120" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.2810996650529064" green="0.69673488451086962" blue="0.099138646006880715" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,9 +206,21 @@
                                     <action selector="addButtonPressed:" destination="zgn-6i-J9i" eventType="touchUpInside" id="lzs-0v-vLw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ish-aT-cle">
+                                <rect key="frame" x="100" y="299" width="120" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.90019955842391308" green="0.16636692421397903" blue="0.18759553539237253" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="zgn-6i-J9i" eventType="touchUpInside" id="ogO-dP-s5c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <outlet property="diameterTextField" destination="evY-5z-DB2" id="Sbi-Vb-pJx"/>
                         <outlet property="funFactTextField" destination="G0Y-Tl-Mas" id="n3R-m6-InY"/>
