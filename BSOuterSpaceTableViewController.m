@@ -5,6 +5,7 @@
 //  Created by Brian Starr on 9/16/14.
 //  Copyright (c) 2014 Brian Starr. All rights reserved.
 //
+//  git branch worked
 
 #import "BSOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
